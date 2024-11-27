@@ -1,0 +1,164 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #007bff;
+    padding: 10px 20px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.navigation button {
+    width: 10%;
+    padding: 10px;
+    background: white;
+    color: #007bff;
+    border: none;
+    padding: 10px 5px;
+    cursor: pointer;
+    
+}
+
+/* Login Box */
+.login-box {
+    width: 350px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.login-box h2 {
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.input-box {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #0056b3;
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #999;
+    transition: 0.2s;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: 10px;
+    left: 17px;
+    font-size: 9px;
+    color: #007bff;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #02aaec;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.remember input {
+    margin-right: 5px;
+}
+
+.login-register {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.login-register p {
+    color: #333;
+}
+
+.login-register a {
+    color: #0b1102; /* Warna hijau untuk tombol register */
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid #3b83f0;
+    border-radius: 10px;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.login-register a:hover {
+    background: #28a745;
+    color: white;
+}
+
+.btn {
+    width: 100%;
+    background: #f30c80;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 9px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
+/* Responsive */
+@media (max-width: 200px) {
+    .login-box,
+    .login-register{
+        width: 50%;
+    }
+}
