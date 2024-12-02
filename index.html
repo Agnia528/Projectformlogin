@@ -20,70 +20,58 @@
             <button class="btnlogin-popup">Guest</button>
         </nav>
     </header>
+<body>
+    <div class="container">
+        <button id="guestButton">Guest</button>
 
-      
-
-            <div id="loginDiv" class="hidden">
-        <h2>Login</h2>
-        <!-- Form Login -->
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
- <p><a href="#" id="showRegisterLink">Daftar</a></p>
-        </form>
-            </div>
-    
-           
-        <div class="login-box">
+        <div id="loginDiv" class="hidden">
             <h2>Member Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
+            <form id="loginForm">
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" id="username" name="username" placeholder="Email" required>
                 </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="Password" required>
-                    <label>Password</label>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
-                <nav class="button"></nav>
                 <button type="submit">Sign in</button>
-                </nav>
-                <div class="remember forgot"></div>
+                
+                <br />
+                <br />
+            <div class="remember forgot"></div>
                 <label><input type="checkbox"> Remember me</label>
                 <a href="#">Forgot Password?</a>
-                <div class="login-register"></div>
-                    <p>Don't have an account? <a href="#" class="btn-register">Register</a></p>
-
-                 <div id="registerDiv" class="hidden">
-        <h2>Register</h2>
-                     <div class="login-box">
-            <h2>Member Login</h2>
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="Password" required>
-                    <label>Password</label>
-                </div>
-                <nav class="button"></nav>
-                <button type="submit">Sign in</button>
-            </nav>
                 
+                <p>Don't have an account?<a href="#" id="showRegisterLink">Register</a></p>
+            </form>
+        </div>
+
+        <div id="registerDiv" class="hidden">
+            <h2>Register Form</h2>
+            <form id="registerForm">
+            
+             <div class="input-container">
+             <i class="fas fa-user"></i>
+                    <input type="text" id="newUsername" name="newUsername" placeholder="Username" required>
                 </div>
-                </form>
+                <div class="input-container">
+               <i class="fas fa-envelope"></i>
+                    <input type="text" id="newUsername" name="newUsername" placeholder="Email" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="newPassword" name="newPassword" placeholder="Password" required>
+                </div>
+                <button type="submit">Register</button>
+                <p><a href="#" id="showLoginLink">Sudah punya akun? Login</a></p>
+            </form>
         </div>
     </div>
+
+
+  
+      
 
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
