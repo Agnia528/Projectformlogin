@@ -7,7 +7,7 @@
   font-family: 'Poppins', sans-serif;
 }
 html,body{
-            display: grid;
+    display: grid;
             height: 100%;
             width: 100%;
             place-items: center;
@@ -15,17 +15,19 @@ html,body{
             background-image: url('rose.jpg');
             background-size: cover; 
             background-position: center; 
-            background-repeat: no-repeat;
+            background-repeat: no-repeat; 
 }
+::selection{
+  background: #41a900;
+  color: #fff;
 }
-
-.wrapper {
-            overflow: hidden;
-            max-width: 390px;
-            background: rgba(255, 255, 255, 0.5); /* Warna putih dengan transparansi */
-            padding: 30px;
-            border-radius: 50px;
-            box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+.wrapper{
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
 }
 .wrapper .title-text{
   display: flex;
@@ -99,13 +101,9 @@ input[type="radio"]{
   width: 100%;
   overflow: hidden;
 }
-  .form-container .form-inner {
-            display: flex;
-            width: 200%;
-            background-color: rgba(255, 255, 255, 0.3); /* Warna dengan transparansi */
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
 }
 .form-container .form-inner form{
   width: 50%;
