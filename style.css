@@ -7,15 +7,15 @@
   font-family: 'Poppins', sans-serif;
 }
 html,body{
-  display: grid;
-  height: 100%;
-  width: 100%;
-  place-items: center;
-  background: #41a900;
-  background-image: url('rose.jpg');
-  background-size: cover; /* Mengubah ukuran gambar untuk menutupi seluruh halaman */
-  background-position: center; /* Memusatkan gambar */
-  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+            display: grid;
+            height: 100%;
+            width: 100%;
+            place-items: center;
+            background: #41a900;
+            background-image: url('rose.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
 }
 }
 ::selection{
