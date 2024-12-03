@@ -99,13 +99,13 @@ input[type="radio"]{
   width: 100%;
   overflow: hidden;
 }
-.form-container .form-inner{
-  display: flex;
-  width: 200%;
-  background-color: rgba(255, 255, 255, 0.8); /* Warna putih dengan transparansi */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  .form-container .form-inner {
+            display: flex;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.3); /* Warna dengan transparansi */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .form-container .form-inner form{
   width: 50%;
