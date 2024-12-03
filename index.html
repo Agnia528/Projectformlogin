@@ -1,134 +1,95 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login dan Register</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Link ke file CSS -->
+    <title>Form Login dan Register</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('URL_GAMBAR_BACKGROUND'); /* Ganti dengan URL gambar Anda */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-info shadow-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Agni Tri Pratiwi</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#project">Project</a>
-              </li>
-               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#sertifikat">Sertifikat</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
-              </li>
 
-                </a>
-              </li>
-            </ul>
-          </div>
+<div class="container" id="login-form">
+    <h2>Login</h2>
+    <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <div class="toggle-link">
+            <a href="#" onclick="toggleForms()">Belum punya akun? Daftar sekarang!</a>
         </div>
-      </nav>  
+    </form>
+</div>
 
-    <div class="container">
-        <button id="gton">Guest</button>
-
-        <div id="loginDiv" class="hidden">
-            <h2>Member Login</h2>
-            <form id="loginForm">
-                <div class="input-container">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" id="username" name="username" placeholder="Email" required>
-                </div>
-                <div class="input-container">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="password" name="password" placeholder="Password" required>
-                </div>
-                <button type="submit">Sign in</button>
-                <p><a href="#" id="showRegisterLink">Daftar</a></p>
-            </form>
+<div class="container" id="register-form" style="display: none;">
+    <h2>Register</h2>
+    <form>
+        <input type="text" placeholder="Nama" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Daftar</button>
+        <div class="toggle-link">
+            <a href="#" onclick="toggleForms()">Sudah punya akun? Masuk sekarang!</a>
         </div>
+    </form>
+</div>
 
-        <div id="registerDiv" class="hidden">
-            <h2>Register</h2>
-            <form id="registerForm">
-                <div class="input-container">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" id="newUsername" name="newUsername" placeholder="Email" required>
-                </div>
-                <div class="input-container">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="newPassword" name="newPassword" placeholder="Password" required>
-                </div>
-                <button type="submit">Register</button>
-                <p><a href="#" id="showLoginLink">Sudah punya akun? Login</a></p>
-            </form>
-        </div>
-    </div>
-
-  
-
-    <div id="loginDiv" class="hidden">
-        <h2>Login</h2>
-        <!-- Form Login -->
-        <form id="loginForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-            <p><a href="#" id="showRegisterLink">Daftar</a></p>
-        </form>
-    </div>
-
-    <div id="registerDiv" class="hidden">
-        <h2>Register</h2>
-        <!-- Form Register -->
-        <form id="registerForm">
-            <label for="newUsername">Username:</label>
-            <input type="text" id="newUsername" name="newUsername" required>
-            <br>
-            <label for="newPassword">Password:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-            <br>
-            <button type="submit">Register</button>
-            <p><a href="#" id="showLoginLink">Sudah punya akun? Login</a></p>
-        </form>
-    </div>
-
-    <script>
-        document.getElementById('guestButton').addEventListener('click', function() {
-            document.getElementById('loginDiv').classList.remove('hidden');
-        });
-
-        document.getElementById('showRegisterLink').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('loginDiv').classList.add('hidden');
-            document.getElementById('registerDiv').classList.remove('hidden');
-        });
-
-        document.getElementById('showLoginLink').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.getElementById('registerDiv').classList.add('hidden');
-            document.getElementById('loginDiv').classList.remove('hidden');
-        });
-    </script>
-</body>
-</html>
-    <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    function toggleForms() {
+        var loginForm = document.getElementById('login-form');
+        var registerForm = document.getElementById('register-form');
+        if (loginForm.style.display === 'none') {
+            loginForm.style.display = 'block';
+            registerForm.style.display = 'none';
+        } else {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        }
+    }
+</script>
 
 </body>
 </html>
