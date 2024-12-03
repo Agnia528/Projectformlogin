@@ -101,7 +101,7 @@ input[type="radio"]{
 }
   .form-container .form-inner {
             display: flex;
-            width: 100%;
+            width: 200%;
             background-color: rgba(255, 255, 255, 0.3); /* Warna dengan transparansi */
             border-radius: 10px;
             padding: 20px;
